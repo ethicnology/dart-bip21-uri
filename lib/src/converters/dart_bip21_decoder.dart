@@ -35,6 +35,6 @@ class BIP21Decoder extends Converter<String, BIP21> {
       options['amount'] = amount;
     }
 
-    return BIP21(address, options);
+    return BIP21(address, options, urnScheme);
   }
 }
