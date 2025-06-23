@@ -1,138 +1,70 @@
 {
   "valid": [
     {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH"
+      "uri": "bitcoin:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W",
+      "scheme": "bitcoin",
+      "address": "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W"
     },
     {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?",
-      "compliant": false
+      "uri": "bitcoin:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?label=Luke-Jr",
+      "scheme": "bitcoin",
+      "address": "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W",
+      "label": "Luke-Jr"
     },
     {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin://1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "compliant": false
+      "uri": "bitcoin:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=20.3&label=Luke-Jr",
+      "scheme": "bitcoin",
+      "address": "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W",
+      "amount": 20.3,
+      "label": "Luke-Jr"
     },
     {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?label=Luke-Jr",
+      "uri": "bitcoin:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=20.3&label=Luke-Jr&message=Donation%20for%20Bitcoin%20Dev%20Fund",
+      "scheme": "bitcoin",
+      "address": "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W",
+      "amount": 20.3,
+      "label": "Luke-Jr",
+      "message": "Donation for Bitcoin Dev Fund"
+    },
+    {
+      "uri": "bitcoin:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?req-somethingyoudontunderstand=50&req-somethingelseyoudontget=999",
+      "scheme": "bitcoin",
+      "address": "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W",
       "options": {
-        "label": "Luke-Jr"
+        "req-somethingyoudontunderstand": "50",
+        "req-somethingelseyoudontget": "999"
       }
     },
     {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=0",
+      "uri": "bitcoin:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?somethingyoudontunderstand=50&somethingelseyoudontget=999",
+      "scheme": "bitcoin",
+      "address": "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W",
       "options": {
-        "amount": 0
+        "somethingyoudontunderstand": "50",
+        "somethingelseyoudontget": "999"
       }
     },
     {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin://1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=0",
-      "compliant": false,
-      "options": {
-        "amount": 0
-      }
-    },
-    {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitCOIN:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=1",
-      "options": {
-        "amount": 1
-      }
-    },
-    {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "BITcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=1.00",
-      "options": {
-        "amount": "1.00"
-      }
-    },
-    {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=20.3&label=Luke-Jr",
-      "options": {
-        "amount": 20.3,
-        "label": "Luke-Jr"
-      }
-    },
-    {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=50&label=Luke-Jr&message=Donation%20for%20project%20xyz",
-      "options": {
-        "amount": 50,
-        "label": "Luke-Jr",
-        "message": "Donation for project xyz"
-      }
-    },
-    {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "BitCoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=1&custom=foobar",
-      "options": {
-        "amount": 1,
-        "custom": "foobar"
-      }
-    },
-    {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "BITCOIN:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=0.200000&r=https%3A%2F%2Fbitpay.com%2Fi%2Fxxxxxxxxxxxxxxxxxxxxxx",
-      "options": {
-        "amount": "0.200000",
-        "r": "https://bitpay.com/i/xxxxxxxxxxxxxxxxxxxxxx"
-      }
-    },
-    {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin://1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=0.200000&r=https%3A%2F%2Fbitpay.com%2Fi%2Fxxxxxxxxxxxxxxxxxxxxxx",
-      "compliant": false,
-      "options": {
-        "amount": "0.200000",
-        "r": "https://bitpay.com/i/xxxxxxxxxxxxxxxxxxxxxx"
-      }
-    },
-    {
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "other:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "urnScheme": "other"
+      "uri": "liquidnetwork:lq1qq0r7uz2f8csrfnr2a4pseszaugm4fefuf6kr0sw0vpk4p5uvfe9yvtg8w8ayllvg7hd39dk6wsma6jvcwyd8sfyk485w25282?amount=0.05&label=ethicnology&message=Liquid%20Bip21",
+      "scheme": "liquidnetwork",
+      "address": "lq1qq0r7uz2f8csrfnr2a4pseszaugm4fefuf6kr0sw0vpk4p5uvfe9yvtg8w8ayllvg7hd39dk6wsma6jvcwyd8sfyk485w25282",
+      "amount": 0.05,
+      "label": "ethicnology",
+      "message": "Liquid Bip21"
     }
-  ],
+  ],  
   "invalid": [
     {
-      "exception": "Invalid BIP21 URI",
-      "uri": "satoshi:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26XXXX"
+      "exception": "Invalid amount",
+      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=-1"
     },
     {
       "exception": "Invalid amount",
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=-1",
-      "options": {
-        "amount": -1
-      }
+      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=-1.00"
     },
     {
       "exception": "Invalid amount",
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "options": {
-        "amount": "-1"
-      }
-    },
-    {
-      "exception": "Invalid amount",
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=-1.00",
-      "options": {
-        "amount": -1.00
-      }
-    },
-    {
-      "exception": "Invalid amount",
-      "address": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
-      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=two",
-      "options": {
-        "amount": "two"
-      }
+      "uri": "bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=two"
     },
     {
       "exception": "Invalid amount",

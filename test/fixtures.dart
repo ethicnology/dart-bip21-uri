@@ -23,43 +23,59 @@ class Fixtures {
 class Valid {
   String address;
   String uri;
-  bool compliant;
+  double? amount;
+  String? label;
+  String? message;
   Map<String, dynamic>? options;
-  String? urnScheme;
+  String? scheme;
 
-  Valid(
-      {required this.address,
-      required this.uri,
-      required this.compliant,
-      required this.options,
-      required this.urnScheme});
+  Valid({
+    required this.address,
+    required this.uri,
+    required this.amount,
+    required this.label,
+    required this.message,
+    required this.options,
+    required this.scheme,
+  });
 
   Valid.fromJson(Map<dynamic, dynamic> json)
       : address = json['address'],
         uri = json['uri'],
-        compliant = json['compliant'] ?? false,
+        amount = json['amount'],
+        label = json['label'],
+        message = json['message'],
         options = json['options'] != null
             ? Map<String, dynamic>.from(json['options'])
             : null,
-        urnScheme = json['urnScheme'];
+        scheme = json['scheme'];
 }
 
 class Invalid {
   String exception;
+  double? amount;
+  String? label;
+  String? message;
   String? uri;
   String? address;
   Map<String, dynamic>? options;
 
-  Invalid(
-      {required this.exception,
-      required this.uri,
-      required this.address,
-      required this.options});
+  Invalid({
+    required this.exception,
+    required this.amount,
+    required this.label,
+    required this.message,
+    required this.uri,
+    required this.address,
+  });
 
   Invalid.fromJson(Map<dynamic, dynamic> json)
       : exception = json['exception'],
         uri = json['uri'],
         address = json['address'],
+        amount = json['amount'],
+        label = json['label'],
+        message = json['message'],
         options = json['options'] != null
             ? Map<String, dynamic>.from(json['options'])
             : null;
