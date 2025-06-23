@@ -5,29 +5,40 @@ A [BIP21](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) compat
 ## Example
 
 ``` dart
-import 'package:dart_bip21/dart_bip21.dart';
+import 'package:bip21_uri/bip21_uri.dart';
 
 void main() {
-  BIP21 decoded = bip21.decode(
+  Bip21Uri decoded = bip21.decode(
       'bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=20.3&label=Foobar');
+      
   print({
     "address": decoded.address,
-    "options": decoded.options,
+    "amount": decoded.amount,
+    "label": decoded.label,
   });
 
-  /// => {address: 1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH, options: {amount: 20.3, label: Foobar}}
-
-  print(bip21.tryEncode('1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH'));
+  print(bip21.encode(Bip21Uri(address: '1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH')));
 
   /// => bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH
-  print(bip21.tryEncode('1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH',
-      {"amount": 20.3, "label": 'Foobar'}));
 
-  /// => bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=20.3&label=Foobar
+  print(
+    bip21.encode(
+      Bip21Uri(
+        address: '1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH',
+        scheme: 'bitcoin',
+        amount: 20.3,
+        label: 'Foobar',
+        message: 'Hello, world!',
+        options: {'payjoin': true},
+      ),
+    ),
+  );
 
   print(bip21.encode(decoded));
-  /// => bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=20.3&label=Foobar
+
+  /// => bitcoin:1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH?amount=20.3&label=Foobar&message=Hello%2C+world%21&payjoin=true
 }
+
 ```
 
 
