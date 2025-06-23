@@ -1,4 +1,7 @@
-# dart-bip21
+[![codecov](https://codecov.io/github/ethicnology/dart-bip21-uri/branch/main/graph/badge.svg?token=Q0JQ1O8S84)](https://codecov.io/github/ethicnology/dart-bip21-uri)
+
+
+# dart-bip21-uri
 
 A [BIP21](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) compatible URL encoding package developed for DartLang.
 
