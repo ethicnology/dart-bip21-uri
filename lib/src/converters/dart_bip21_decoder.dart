@@ -47,9 +47,6 @@ class BIP21Decoder extends Converter<String, Bip21Uri> {
       (key, value) => ['amount', 'label', 'message'].contains(key),
     );
 
-    // Remove empty values
-    options.removeWhere((key, value) => value == '');
-
     return Bip21Uri(
       scheme: scheme,
       address: address,

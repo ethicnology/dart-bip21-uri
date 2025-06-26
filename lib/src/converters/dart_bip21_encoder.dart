@@ -22,9 +22,6 @@ class BIP21Encoder extends Converter<Bip21Uri, String> {
       ),
     );
 
-    // Remove empty values
-    options.removeWhere((key, value) => value == '');
-
     String query = options.keys.map((key) => '$key=${options[key]}').join('&');
 
     // final label = input.label ?? '';
