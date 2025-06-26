@@ -27,12 +27,12 @@ class BIP21Encoder extends Converter<Bip21Uri, String> {
 
     String query = options.keys.map((key) => '$key=${options[key]}').join('&');
 
-    final label = input.label ?? '';
-    final message = input.message ?? '';
+    // final label = input.label ?? '';
+    // final message = input.message ?? '';
     final params = [
       if (input.amount != null) 'amount=${input.amount}',
-      if (label.isNotEmpty) 'label=${encodeParam(label)}',
-      if (message.isNotEmpty) 'message=${encodeParam(message)}',
+      if (input.label != null) 'label=${encodeParam(input.label!)}',
+      if (input.message != null) 'message=${encodeParam(input.message!)}',
       if (options.keys.isNotEmpty) query
     ];
 

@@ -48,4 +48,31 @@ void main() {
       }
     });
   });
+
+  test('test empty decode', () {
+    final uri =
+        'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?label=&message=&amount=&something=value';
+    final decode = bip21.decode(uri);
+    expect(decode.amount, null);
+    expect(decode.label, '');
+    expect(decode.message, '');
+    expect(decode.options['something'], 'value');
+  });
+
+  test('test empty encode', () {
+    final encoded = bip21.encode(Bip21Uri(
+      address: '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa',
+      label: '',
+      amount: null,
+      message: '',
+      options: {
+        'something': 'value',
+      },
+    ));
+    print(encoded);
+
+    final uri =
+        'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?label=&message=&something=value';
+    expect(encoded, uri);
+  });
 }

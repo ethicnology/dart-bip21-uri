@@ -1,6 +1,5 @@
 //  "qchar" corresponds to valid characters of an RFC 3986 URI query component, excluding the "=" and "&" characters, which this BIP takes as separators.
 bool isValidString(String input) {
-  if (input.isEmpty) return false;
   return !input.contains('=') && !input.contains('&');
 }
 
