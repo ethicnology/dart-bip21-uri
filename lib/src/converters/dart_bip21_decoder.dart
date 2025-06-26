@@ -25,6 +25,9 @@ class BIP21Decoder extends Converter<String, Bip21Uri> {
     } else {
       String query = parts.last.split('?').last;
       options = Map<String, dynamic>.from(Uri.splitQueryString(query));
+
+      // Remove empty values
+      options.removeWhere((key, value) => value == '');
     }
 
     double? amount;
@@ -36,11 +39,17 @@ class BIP21Decoder extends Converter<String, Bip21Uri> {
       }
     }
 
-    final label =
-        options['label'] != null ? decodeParam(options['label']!) : null;
-    final message =
-        options['message'] != null ? decodeParam(options['message']!) : null;
+    String? label;
+    if (options.containsKey('label') && options['label']!.isNotEmpty) {
+      label = decodeParam(options['label']!);
+    }
 
+    String? message;
+    if (options.containsKey('message') && options['message']!.isNotEmpty) {
+      message = decodeParam(options['message']!);
+    }
+
+    // Remove amount, label, and message from options
     options.removeWhere(
       (key, value) => ['amount', 'label', 'message'].contains(key),
     );
