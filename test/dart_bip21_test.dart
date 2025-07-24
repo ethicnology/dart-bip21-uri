@@ -51,13 +51,14 @@ void main() {
 
   test('test empty decode', () {
     final uri =
-        'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?label=&message=&amount=&something=value&empty=';
+        'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?label=&message=&something=value&empty=';
     final decode = bip21.decode(uri);
     expect(decode.amount, null);
     expect(decode.label, '');
     expect(decode.message, '');
     expect(decode.options['something'], 'value');
     expect(decode.options['empty'], '');
+    expect(decode.toString(), uri);
   });
 
   test('test empty encode', () {
