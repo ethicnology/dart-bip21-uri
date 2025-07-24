@@ -1,3 +1,7 @@
+## 2.1.1
+
+- fix: regression on uppercase
+
 ## 2.1.0
 
 - If `pj` is passed among the options of the query parameters, the package now process it as a payjoin Uri specified in BIP77 supporting both percent encoded or not, `+` and `-`. Keep the `#` encoded as `%23` and the Uri is uppercase.
