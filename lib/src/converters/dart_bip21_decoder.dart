@@ -15,15 +15,16 @@ class BIP21Decoder extends Converter<String, Bip21Uri> {
 
   @override
   Bip21Uri convert(String input) {
-    final parts = input.split(':');
-    final scheme = parts.first.toLowerCase();
+    final semiSplit = input.split(':');
+    final scheme = semiSplit.first.toLowerCase();
 
     Map<String, dynamic> options = {};
-    String address = parts.last.split('?').first;
+    final questionSplit = input.split('?');
+    String address = questionSplit.first.replaceAll('$scheme:', '');
     if (!input.contains('?')) {
-      address = parts.last;
+      address = semiSplit.last;
     } else {
-      String query = parts.last.split('?').last;
+      String query = questionSplit.last;
       options = Map<String, dynamic>.from(Uri.splitQueryString(query));
     }
 
