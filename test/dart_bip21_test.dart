@@ -71,7 +71,6 @@ void main() {
         'empty': '',
       },
     ));
-    print(encoded);
 
     final uri =
         'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?label=&message=&something=value&empty=';

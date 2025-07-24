@@ -28,6 +28,11 @@ class BIP21Decoder extends Converter<String, Bip21Uri> {
       options = Map<String, dynamic>.from(Uri.splitQueryString(query));
     }
 
+    if (options['pj'] != null) {
+      final pj = options['pj']!.replaceAll(' ', '-').replaceAll('#', '%23');
+      options['pj'] = pj.toUpperCase();
+    }
+
     double? amount;
     if (options['amount'] != null && options['amount']!.isNotEmpty) {
       try {
