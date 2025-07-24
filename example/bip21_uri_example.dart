@@ -28,7 +28,11 @@ void main() {
         amount: 20.3,
         label: 'Foobar',
         message: 'Hello, world!',
-        options: {'payjoin': 'true'},
+        options: {
+          'payjoin': 'true',
+          'pj':
+              'HTTPS://PAYJO.IN/TXJCGKTKXLUUZ%23EX1WKV8CEC-OH1QYPM59NK2LXXS4890SUAXXYT25Z2VAPHP0X7YEYCJXGWAG6UG9ZU6NQ-RK1Q0DJS3VVDXWQQTLQ8022QGXSX7ML9PHZ6EDSF6AKEWQG758JPS2EV'
+        },
       ),
     ),
   );
