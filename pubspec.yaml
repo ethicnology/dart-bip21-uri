@@ -1,6 +1,6 @@
 name: bip21_uri
 description: A Bip21 compatible URL encoding package developed for DartLang.
-version: 2.0.1
+version: 2.1.0
 homepage: https://github.com/ethicnology/dart-bip21-uri
 repository: https://github.com/ethicnology/dart-bip21-uri
 issue_tracker: https://github.com/ethicnology/dart-bip21-uri/issues
