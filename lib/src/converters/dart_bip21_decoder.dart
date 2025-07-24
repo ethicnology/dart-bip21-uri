@@ -16,7 +16,7 @@ class BIP21Decoder extends Converter<String, Bip21Uri> {
   @override
   Bip21Uri convert(String input) {
     final semiSplit = input.split(':');
-    final scheme = semiSplit.first.toLowerCase();
+    final scheme = semiSplit.first;
 
     Map<String, dynamic> options = {};
     final questionSplit = input.split('?');

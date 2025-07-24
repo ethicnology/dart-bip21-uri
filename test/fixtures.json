@@ -6,6 +6,11 @@
       "address": "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W"
     },
     {
+      "uri": "BITCOIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W",
+      "scheme": "BITCOIN",
+      "address": "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W"
+    },
+    {
       "uri": "bitcoin:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?label=Luke-Jr",
       "scheme": "bitcoin",
       "address": "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W",
@@ -47,6 +52,14 @@
     {
       "uri": "liquidnetwork:lq1qq0r7uz2f8csrfnr2a4pseszaugm4fefuf6kr0sw0vpk4p5uvfe9yvtg8w8ayllvg7hd39dk6wsma6jvcwyd8sfyk485w25282?amount=0.05&label=ethicnology&message=Liquid%20Bip21",
       "scheme": "liquidnetwork",
+      "address": "lq1qq0r7uz2f8csrfnr2a4pseszaugm4fefuf6kr0sw0vpk4p5uvfe9yvtg8w8ayllvg7hd39dk6wsma6jvcwyd8sfyk485w25282",
+      "amount": 0.05,
+      "label": "ethicnology",
+      "message": "Liquid Bip21"
+    },
+    {
+      "uri": "LIQUIDNETWORK:lq1qq0r7uz2f8csrfnr2a4pseszaugm4fefuf6kr0sw0vpk4p5uvfe9yvtg8w8ayllvg7hd39dk6wsma6jvcwyd8sfyk485w25282?amount=0.05&label=ethicnology&message=Liquid%20Bip21",
+      "scheme": "LIQUIDNETWORK",
       "address": "lq1qq0r7uz2f8csrfnr2a4pseszaugm4fefuf6kr0sw0vpk4p5uvfe9yvtg8w8ayllvg7hd39dk6wsma6jvcwyd8sfyk485w25282",
       "amount": 0.05,
       "label": "ethicnology",
