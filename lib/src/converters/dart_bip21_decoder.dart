@@ -29,7 +29,10 @@ class BIP21Decoder extends Converter<String, Bip21Uri> {
     }
 
     if (options['pj'] != null) {
-      final pj = options['pj']!.replaceAll(' ', '-').replaceAll('#', '%23');
+      final pj = options['pj']!
+          .replaceAll(' ', '+')
+          .replaceAll('-', '+')
+          .replaceAll('#', '%23');
       options['pj'] = pj.toUpperCase();
     }
 

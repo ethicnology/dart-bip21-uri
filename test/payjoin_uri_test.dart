@@ -15,10 +15,18 @@ void main() {
     'bitcoin:tb1q6q6de88mj8qkg0q5lupmpfexwnqjsr4d2gvx2p?amount=0.00666666&pjos=0&pj=$percentPayjoinUri'
   ];
 
-  test('payjoin', () {
+  test('payjoin decode', () {
     for (final payload in valids) {
       final uri = bip21.decode(payload);
-      expect(uri.options['pj'], equals(minusPayjoinUri));
+      expect(uri.options['pj'], equals(plusPayjoinUri));
+    }
+  });
+
+  test('payjoin encode', () {
+    for (final payload in valids) {
+      final uri = bip21.decode(payload);
+      final encoded = bip21.encode(uri);
+      expect(encoded, valids[0]);
     }
   });
 }

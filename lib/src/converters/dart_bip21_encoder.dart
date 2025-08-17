@@ -18,7 +18,7 @@ class BIP21Encoder extends Converter<Bip21Uri, String> {
     final options = Map<String, dynamic>.from(input.options).map(
       (key, value) => MapEntry(
         encodeParam(key),
-        encodeParam(value.toString()),
+        key == 'pj' ? value.toString() : encodeParam(value.toString()),
       ),
     );
 
