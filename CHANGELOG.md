@@ -1,3 +1,8 @@
+## 2.1.2
+
+- refactor: `payjoin-flutter` is not compatible with hyphens `-` symbol defined in the latest payjoin specification. To ensure retrocompatibility with `payjoin-flutter`, `bip21_uri` is returning the pj field with `+` sign.
+
+
 ## 2.1.1
 
 - fix: regression on uppercase
