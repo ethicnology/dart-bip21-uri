@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:core';
 
 import 'package:bip21_uri/src/bip21_uri_model.dart';
-import 'package:bip21_uri/utils.dart';
 
 /// The canonical instance of [BIP21Decoder].
 const bip21Decoder = BIP21Decoder();
@@ -45,11 +44,9 @@ class BIP21Decoder extends Converter<String, Bip21Uri> {
       }
     }
 
-    String? label =
-        options['label'] != null ? decodeParam(options['label']!) : null;
+    String? label = options['label'];
 
-    String? message =
-        options['message'] != null ? decodeParam(options['message']!) : null;
+    String? message = options['message'];
 
     // Remove amount, label, and message from options
     options.removeWhere(
