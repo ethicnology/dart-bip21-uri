@@ -47,6 +47,19 @@ class Bip21Uri {
     }
   }
 
+  /// Check if this URI contains a lightning invoice
+  bool get hasLightningInvoice => options.containsKey('lightning');
+
+  /// Get the lightning invoice from options
+  String? get lightningInvoice => options['lightning'] as String?;
+
+  /// Check if the lightning invoice is valid (starts with ln)
+  bool get hasValidLightningInvoice {
+    final invoice = lightningInvoice;
+    if (invoice == null) return false;
+    return invoice.toLowerCase().startsWith('ln');
+  }
+
   @override
   String toString() => bip21.encode(this);
 }
